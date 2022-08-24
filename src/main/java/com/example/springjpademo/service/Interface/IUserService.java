@@ -8,6 +8,6 @@ import java.util.List;
 public interface IUserService {
     List<User> getUserName(String name);
     List<User> getTop5UserOrderByID();
-    User getUserByMail(String mail);
+//    User getUserByMail(String mail);
     List<User> getAllWithSort();
 }

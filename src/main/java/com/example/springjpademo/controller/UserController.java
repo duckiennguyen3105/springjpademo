@@ -33,15 +33,15 @@ public class UserController {
 
     }
 
-    @GetMapping("/getUserByMail/{mail}")
-    public ResponseEntity<?> getUserByMail(@PathVariable("mail") String mail){
-        try {
-            User user = iUserService.getUserByMail(mail);
-            return ResponseEntity.ok(user);
-        }catch (MailNotFoundException mailNotFoundException){
-            return new ResponseEntity<>(mailNotFoundException.getMessage(),HttpStatus.BAD_REQUEST);
-        }
-    }
+//    @GetMapping("/getUserByMail/{mail}")
+//    public ResponseEntity<?> getUserByMail(@PathVariable("mail") String mail){
+//        try {
+//            User user = iUserService.getUserByMail(mail);
+//            return ResponseEntity.ok(user);
+//        }catch (MailNotFoundException mailNotFoundException){
+//            return new ResponseEntity<>(mailNotFoundException.getMessage(),HttpStatus.BAD_REQUEST);
+//        }
+//    }
 
     @GetMapping("/getAllUserWithSort")
     public ResponseEntity<?> getAllUserWithSort(){

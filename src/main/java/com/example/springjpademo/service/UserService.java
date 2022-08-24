@@ -27,13 +27,13 @@ public class UserService implements IUserService {
         return user;
     }
 
-    @Override
-    public User getUserByMail(String mail) throws MailNotFoundException{
-        User user = repository.findByEmail(mail).orElseThrow(() -> {
-            throw new MailNotFoundException("Khong tim thay " + mail);
-        });
-        return user;
-    }
+//    @Override
+//    public User getUserByMail(String mail) throws MailNotFoundException{
+//        User user = repository.findByEmail(mail).orElseThrow(() -> {
+//            throw new MailNotFoundException("Khong tim thay " + mail);
+//        });
+//        return user;
+//    }
 
     @Override
     public List<User> getAllWithSort() {
